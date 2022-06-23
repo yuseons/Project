@@ -34,15 +34,22 @@
 			</div>
 			
 
-			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-8">
-		<button id="findPw_btn" 
-		class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round">패스워드 찾기</button>
-		
-		<button type="button" onclick="location.href='/member/login'" 
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-8">
+        <button type="button"
+        class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round"
+        id="findPw_btn">찾기</button>
+        <button type="button" 
+        class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round"
+        onclick="location.href='/member/findId'">아이디 찾기</button>     
+        <button type="button"
+        class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round"
+         onclick="location.href='agree'">회원가입</button>
+         <button type="button" onclick="location.href='/member/login'" 
 		class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round">취소</button>
-				</div>
-			</div>
+      </div>
+    </div>
+
 	</form>
 	</div>
 </body>

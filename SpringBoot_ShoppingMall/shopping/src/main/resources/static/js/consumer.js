@@ -26,7 +26,9 @@ function showList() {
 function replaceAll(str, searchStr, replaceStr) {
   return str.split(searchStr).join(replaceStr);
 }
- 
+//--showlist 끝
+
+ //리뷰 목록 페이지
 let param = '';
     param = "nPage=" + nPage;
     param += "&contentsno=" + contentsno;
@@ -54,13 +56,21 @@ $("#modalCloseBtn").on("click", function (e) {
 });
   
 $("#addReviewBtn").on("click", function (e) {
-  modalInputContent.val("");
-  modal.find("button[id !='modalCloseBtn']").hide();
+	
+	if(id == null || id == ""){
+		if(confirm("로그인이 필요합니다.")){
+			let url = "/member/login?rurl=/contents/detail/"+contentsno+"&"+param;
+			location.href=url;
+			return;
+		}}else{
+			  modalInputContent.val("");
+ 		  	  modal.find("button[id !='modalCloseBtn']").hide();
  
-  modalRegisterBtn.show();
+  		    modalRegisterBtn.show();
  
-  $(".modal").modal("show");
- 
+ 			 $(".modal").modal("show");
+		}
+
 });
  
 modalRegisterBtn.on("click", function (e) {
@@ -72,7 +82,7 @@ modalRegisterBtn.on("click", function (e) {
  
   let review = {
     content: modalInputContent.val(),
-    id: 'user1',
+    id: id,
     contentsno: contentsno
  				 };
   add(review)
@@ -100,9 +110,13 @@ $(".chat").on("click", "li", function (e) {
  
       modal.find("button[id !='modalCloseBtn']").hide();
  
+ 	if(id == review.id){ //자신의 아이디로 쓴 글만 수정,삭제버튼 뜨게 하기
+	
       modalModBtn.show();
       modalRemoveBtn.show();
- 
+ 	
+}
+
       $(".modal").modal("show");
  
     });

@@ -81,27 +81,16 @@ public class MemberServiceImpl implements MemberService {
   }
 
   @Override
-  public int findId(Map<String, String> map) {
+  public String findId(Map<String, String> map) {
     // TODO Auto-generated method stub
     return mapper.findId(map);
   }
 
-  @Override
-  public String getId(String string) {
-    // TODO Auto-generated method stub
-    return mapper.getId(string);
-  }
 
   @Override
-  public int findPw(Map<String, String> map) {
+  public String findPw(Map<String, String> map) {
     // TODO Auto-generated method stub
     return mapper.findPw(map);
-  }
-
-  @Override
-  public String getPasswd(String string) {
-    // TODO Auto-generated method stub
-    return mapper.getPasswd(string);
   }
 
 

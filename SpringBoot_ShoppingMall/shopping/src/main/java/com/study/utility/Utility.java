@@ -235,8 +235,7 @@ public class Utility {
 
   }
   
-  //리뷰목록 페이징
-  public static String rpaging(int total, int recordPerPage, String url, int nPage) {
+  public static String rpaging(int total, int recordPerPage,  String url, int nPage) {
     int pagePerBlock = 5; // 블럭당 페이지 수
     int totalPage = (int) (Math.ceil((double) total / recordPerPage)); // 전체 페이지
     int totalGrp = (int) (Math.ceil((double) totalPage / pagePerBlock));// 전체 그룹
@@ -275,10 +274,7 @@ public class Utility {
     return str.toString();
  
   }
-  
-  //리뷰 수 보여주기
-  
-//  public static int rcount(int contentsno,ReplyService rservice){
-//    return rservice.total(contentsno);
+//  public static int rcount(int bbsno,ReplyService rservice){
+//    return rservice.total(bbsno);
 //  }
 }

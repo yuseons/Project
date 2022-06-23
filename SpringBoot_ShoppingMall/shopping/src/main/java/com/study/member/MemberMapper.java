@@ -29,13 +29,10 @@ public interface MemberMapper {
 
   int updateFile(Map map);
     
-  int findId(Map<String, String> map);
+  String findId(Map<String, String> map);
   
-  String getId(String string);
   
-  int findPw(Map<String, String> map);
-
-  String getPasswd(String string);
+  String findPw(Map<String, String> map);
 
 
 
