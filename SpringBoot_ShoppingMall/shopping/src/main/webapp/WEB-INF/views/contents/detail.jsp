@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <script type="text/javascript" src="/js/cart.js"></script>
   <script type="text/javascript">
+  
   function cart(){
 	  if('${sessionScope.id}' == ''){
 		  alert('먼저 로그인을 하세요');
@@ -41,6 +42,7 @@
 	  .catch(console.log);
   }
   
+  
   function order(){
 	  if('${sessionScope.id}' == ''){
 		  alert('먼저 로그인을 하세요');
@@ -48,6 +50,20 @@
 		  return;
 	  }
 	  //주문서 작성으로 이동 주문생성 (비동기)
+	  let count = document.getElementById('qty').value;  //$('#qty').val() : jquery식 표현 (같은 뜻)
+	  let select = document.querySelector('.form-select'); //form의 클래스 이름으로 select를 찾아오기
+	  let i = select.selectedIndex; //선택한 select 순번 가져오기
+	  
+	  //사이즈 선택 안했을시 선택하라고 하기  
+	  if(i==0 && !select.disabled){  //사이즈 선택 안함(i==0 : select 순번 0번을 선택함) && cateno==2일 경우(bag) 사이즈 선택 안함 : select.disabled
+		  alert("사이즈를 선택하세요.");
+		  select.focus();
+		  return; //멈춤
+	  }else if(select.disabled){
+		  select[i].value=0; //선택한 사이즈(select[i])를 0으로 함(사이즈는 not null이기 떄문에 값이 있어야하기 떄문)
+	  }
+	  let url = "/order/create/order/${dto.contentsno}/"+count+"/"+select[i].value; //detail에서 주문서로 가는 url
+	  location.href = url;
   }
   </script>
 </head>

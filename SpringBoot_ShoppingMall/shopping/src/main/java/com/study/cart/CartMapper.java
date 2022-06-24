@@ -7,5 +7,7 @@ public interface CartMapper {
   int create(CartDTO dto);
 
   List<CartDTO> list(String id);
+ 
+  void delete(int cartno);
 
 }

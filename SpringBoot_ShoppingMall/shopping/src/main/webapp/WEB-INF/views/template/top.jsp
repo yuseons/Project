@@ -90,8 +90,8 @@
     <li><a href="${root}/member/logout"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
     </c:when>
     <c:otherwise>
-    <li><a href="${root}/cart/list"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-    <li><a href="${root}/member/update"><span class="glyphicon glyphicon-edit"></span> 회원수정</a></li>
+    <li><a href="${root}/cart/list"><span class="glyphicon glyphicon-shopping-cart"></span>장바구니</a></li>
+    <li><a href="${root}/member/update"><span class="glyphicon glyphicon-edit"></span> 회원정보 수정</a></li>
     <li><a href="${root}/member/logout"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
         </c:otherwise>
     </c:choose> 

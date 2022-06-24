@@ -30,6 +30,7 @@ public class ContentsController {
   @Qualifier("com.study.contents.ContentsServiceImpl")
   private ContentsService service;
 
+ 
   
   @GetMapping("/contents/read")
   public String read(int contentsno, Model model, HttpServletRequest request) {

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>회원수정</title>
+  <title>회원정보 수정</title>
   <meta charset="utf-8">
   <style type="text/css">
   	#need,#emailcheck{
