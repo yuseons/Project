@@ -13,16 +13,16 @@ select * from contents;
 select * from member;
 							-- 존재하는 글의 contentsno를 입력해야한다
 insert into review(content, regdate, id, contentsno)
-values('리뷰 남깁니다.',sysdate(),'user1',1);
+values('리뷰 남깁니다.',sysdate(),'user1',21);
 
 insert into review(content, regdate, id, contentsno)
-values('리뷰 남깁니다. 물건이 마음에 들어요.',sysdate(),'user2',1);
+values('리뷰 남깁니다. 물건이 마음에 들어요.',sysdate(),'user2',21);
 
 insert into review(content, regdate, id, contentsno)
-values('리뷰 남깁니다.너무 편해요.',sysdate(),'test',1);
+values('리뷰 남깁니다.너무 편해요.',sysdate(),'test',21);
 
 insert into review(content, regdate, id, contentsno)
-values('좋아요.',sysdate(),'user3',1);
+values('좋아요.',sysdate(),'user3',21);
 
 
                     

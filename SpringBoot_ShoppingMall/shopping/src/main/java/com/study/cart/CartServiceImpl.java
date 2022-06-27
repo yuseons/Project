@@ -29,4 +29,9 @@ public class CartServiceImpl implements CartService {
    mapper.delete(cartno);
   }
 
+  @Override
+  public void deleteAll(String id) {
+    mapper.deleteAll(id);
+  }
+
 }

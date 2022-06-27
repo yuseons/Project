@@ -15,7 +15,7 @@ function order(tot){
 	let reqtext = req.options[req.selectedIndex].text; //req.options : req가 갖고있는 모든 select options //[req.selectedIndex].text: 선택한 option(순서는 0부터 시작)을 text로 뽑아옴
 	
 	let f = document.querySelector("#oform");
-	f.tot.value = tot;
+	f.tot.value = tot; 
 	f.payment.value = payment;
 	f.reqtext.value = reqtext;
 	f.action = "/order/create/${str}"; //요청 url //str : 장바구니에서의 결제인지 아닌지의 차이
@@ -24,7 +24,7 @@ function order(tot){
 	//alert(payment);
 	//alert(reqtext);
 
-	 //f.submit();
+	 f.submit();
 }
 
 </script>
@@ -90,7 +90,7 @@ function order(tot){
 	<li class="list-group-item" style="font-size:large;color: red" >
 	총 상품 금액 ${tot } 원 +  배송비 3000 원 = 최종 결제금액 ${tot+3000 }원 
 	
-	<a href="javascript:order('${tot }')">
+	<a href="javascript:order('${tot+3000 }')">
 	<img src='/svg/wallet.svg' title="결제하기" style="width:30px;padding-left:10px">
 	결제</a>
   </ul>
@@ -101,8 +101,9 @@ function order(tot){
 <form id="oform" method="post">
 	<input type="hidden" name="cno" value="${cno }"> <!-- 장바구니에서 주문 -->
 	<input type="hidden" name="contentsno" value="${contentsno }"> <!-- 상세페이지에서 바로 주문 -->
-	<input type="hidden" name="qty" value="${qty }">
-	<input type="hidden" name="size" value="${size }">
+	<input type="hidden" name="qty" value="${qty }"> <!-- 장바구니에서 왔다면 배열형식으로 여러개, 상세페이지에서 왔다면 1개 -->
+	<input type="hidden" name="qtys" value="${qtys }"> 
+	<input type="hidden" name="size" value="${size }"> <!-- qty와 마찬가지 -->
 	<input type="hidden" name="tot" value="">
 	<input type="hidden" name="payment" value="">
 	<input type="hidden" name="reqtext" value="">

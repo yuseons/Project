@@ -6,11 +6,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.study.cart.CartMapper">
 
+	<delete id="deleteAll" parameterType="String">
+		delete
+		from cart
+		where id = #{id}
+	</delete>
 
 	<delete id="delete" parameterType="int">
 		delete
 		from cart
-		where cartno = ${cartno}
+		where cartno = #{cartno}
 	</delete>
 
 	<insert id="create" parameterType="com.study.cart.CartDTO">
