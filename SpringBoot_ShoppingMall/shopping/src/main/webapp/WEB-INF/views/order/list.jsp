@@ -31,7 +31,7 @@
      }
      function update(orderno, i){
     	 let l = document.getElementById("choice-"+i).selectedIndex;    	
-    	 let value = document.getElementById("choice-"+i).options[l].value;
+    	 let value = document.getElementById("choice-"+i).options[l].value; //선택한 옵션의 value값을 뽑아옴
     	 producer(orderno, value)
     	 .then(text => alert(text))
     	 .catch(console.log)
@@ -108,9 +108,9 @@
     <td>${dto.reqtext}</td>
     <td>
  	<select id="choice-${v.index}" name="ostate">
-	    <option value="배송 준비중" <c:if test= "${ostate=='배송 준비중'}"> selected </c:if>>배송 준비중
-	    <option value="배송 중" <c:if test= "${ostate=='배송 중'}"> selected </c:if>>배송 중
-	    <option value="배송 완료" <c:if test= "${ostate=='배송 완료'}"> selected </c:if>>배송 완료
+	    <option value="배송 준비중" <c:if test= "${dto.ostate=='배송 준비중'}"> selected </c:if>>배송 준비중
+	    <option value="배송 중" <c:if test= "${dto.ostate=='배송 중'}"> selected </c:if>>배송 중
+	    <option value="배송 완료" <c:if test= "${dto.ostate=='배송 완료'}"> selected </c:if>>배송 완료
 	</select>
     </td>
     <td> <a href="javascript:update('${dto.orderno }','${v.index}')">

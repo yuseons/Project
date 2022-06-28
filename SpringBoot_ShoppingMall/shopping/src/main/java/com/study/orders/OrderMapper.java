@@ -13,5 +13,7 @@ public interface OrderMapper {
   
   int total(Map map);
 
+  int updateState(Map map);
+
  
 }

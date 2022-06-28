@@ -9,5 +9,9 @@
             <put-attribute name="title" value="주문서" ></put-attribute> 
             <put-attribute name="body" value="/WEB-INF/views/order/createForm.jsp" /> 
    	</definition>
+   	    <definition name="/order/list" extends="main"> 
+            <put-attribute name="title" value="주문ahrfhr" ></put-attribute> 
+            <put-attribute name="body" value="/WEB-INF/views/order/list.jsp" /> 
+   	</definition>
    	
 </tiles-definitions> 
