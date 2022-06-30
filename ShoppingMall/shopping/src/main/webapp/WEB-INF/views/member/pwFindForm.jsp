@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <title>로그인 처리</title>
   <meta charset="utf-8">
   <script type="text/javascript">
@@ -38,7 +42,7 @@
 <body>
 <div class="container">
 
-<h1 class="col-sm-offset-2 col-sm-10">비번 찾기</h1>
+<h1 class="col-sm-offset-2 col-sm-10">비밀번호 찾기</h1>
   <form class="form-horizontal">          
     <div class="form-group">
       <label class="control-label col-sm-2" for="id">아이디</label>
@@ -54,19 +58,26 @@
         placeholder="Enter mname" name="mname" required="required">
       </div>
     </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-8">
-        <button type="button" class="btn btn-default" id="btn">찾기</button>
-        <button type="button" class="btn btn-default"
-         onclick="location.href='agree'">회원가입</button>
-         <button type="button" onclick="location.href='/member/idfind'" class="btn btn-default">아이디 찾기</button>
-      </div>
-    </div>
-    <div class="form-group">        
+
+        <div class="form-group">        
      <div class="col-sm-offset-2 col-sm-8"> 
      <span id="msg"></span>
      </div>
      </div>
+    
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-8">
+        <button type="button" class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round"
+         id="btn">찾기</button>
+        <button type="button" class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round"
+         onclick="location.href='agree'">회원가입</button>
+         <button type="button" onclick="location.href='/member/idfind'" 
+         class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round">아이디 찾기</button>
+        <button type="button" onclick="location.href='/member/login'" 
+		class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round">취소</button>
+      </div>
+    </div>
+
   </form>
 
 </div>
