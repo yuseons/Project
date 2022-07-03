@@ -3,6 +3,8 @@ package com.study.member;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletResponse;
+
 public interface MemberMapper {
 
   MemberDTO mypage(String id);
@@ -26,10 +28,12 @@ public interface MemberMapper {
   List<MemberDTO> list(Map map);
 
   int updateFile(Map map);
+    
+  String findId(Map<String, String> map);
   
-  String idFind(Map<String, String> map);
   
-  String pwFind(Map<String, String> map);
-  
+  String findPw(Map<String, String> map);
+
+
 
 }

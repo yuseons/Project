@@ -37,17 +37,21 @@
     <div class="form-group">
       <select class="form-control" name="col">
         <option value="cateno"
-        <c:if test= "${col=='cateno'}"> selected </c:if>
-        >상품분류(Jean:1,Bag:2)</option>
+       	 <c:if test= "${col=='cateno'}"> selected </c:if>
+        >상품분류(Jean:1,Bag:2)
+        </option>
         <option value="pname"
-        <c:if test= "${col=='pname'}"> selected </c:if>
-        >상품명</option>
+     	   <c:if test= "${col=='pname'}"> selected </c:if>
+        >상품명
+        </option>
         <option value="price"
-        <c:if test= "${col=='price'}"> selected </c:if>
-        >가격</option>
+       	 <c:if test= "${col=='price'}"> selected </c:if>
+        >가격
+        </option>
         <option value="total"
-        <c:if test= "${col=='total'}"> selected </c:if>
-        >전체출력</option>       
+     	   <c:if test= "${col=='total'}"> selected </c:if>
+        >전체출력
+        </option>       
      </select>
     </div>
     <div class="form-group">

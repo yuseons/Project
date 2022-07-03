@@ -9,18 +9,17 @@
 <style type="text/css">
     
 img {
-  display:inline;
- 
+ height: 100%;
+ width: 100%;
+ object-fit: contain;
 }
  
 </style>
 </head>
 <body> 
  
-<div class="container">
-    <p><a href="/content/mainlist" >SHOP NOW</a></p>
-    <img src="/images/jeans.jpg" alt="Jeans">
-    
+<div class="container">   
+    <img src="/images/main.jpg" alt="main">   
 </div>
 </body> 
 </html>

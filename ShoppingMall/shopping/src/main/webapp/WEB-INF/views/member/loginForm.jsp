@@ -52,9 +52,9 @@
       <div class="col-sm-offset-2 col-sm-8">
         <button type="submit" class="btn btn-default">로그인</button>
         <button type="button" class="btn btn-default"
-         onclick="location.href='agree'">회원가입</button>
-        <button type="button" onclick="location.href='/member/idfind'" class="btn btn-default">아이디 찾기</button>
-        <button type="button" onclick="location.href='/member/pwfind'" class="btn btn-default">패스워드 찾기</button>
+         onclick="location.href='/member/agree'">회원가입</button>
+        <button type="button" onclick="location.href='/member/findId'" class="btn btn-default">아이디 찾기</button>
+        <button type="button" onclick="location.href='/member/findPw'" class="btn btn-default">패스워드 찾기</button>
       </div>
     </div>
   </form>

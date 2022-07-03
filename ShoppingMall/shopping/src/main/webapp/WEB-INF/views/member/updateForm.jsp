@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>회원수정</title>
+  <title>회원정보 수정</title>
   <meta charset="utf-8">
   <style type="text/css">
+  
   	#need,#emailcheck{
   		color:red;
   	}
@@ -138,7 +139,7 @@ function inCheck(f){
       </div>
       
       <button type="button" class="btn btn-default col-sm-2"
-      onclick="emailCheck(document.frm.email.value)">Email 변경</button>
+      onclick="emailCheck(document.frm.email.value)">Email 중복확인</button>
       <div id="emailcheck"></div>
       
     </div>
