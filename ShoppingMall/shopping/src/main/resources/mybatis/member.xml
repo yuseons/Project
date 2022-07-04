@@ -5,22 +5,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.study.member.MemberMapper">
 
-	
-	<select id="findPw" parameterType="Map" resultType="String">
-		SELECT passwd
-		FROM member
-		WHERE id = #{id}
-		and mname = #{mname}
-	</select>
-
-	<select id="findId" parameterType="Map" resultType="String">
-		SELECT id
-		FROM member
-		WHERE mname = #{mname}
-		and email = #{email}
-	</select>
-
-
 	<resultMap type="com.study.member.MemberDTO" id="memberOrder">
 		<result property="id" column="id" />
 		<result property="mname" column="mname" />
@@ -57,6 +41,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 
+	<select id="pwFind" parameterType="Map" resultType="String">
+		select passwd from member
+		where mname = #{mname}
+		and id = #{id}
+	</select>
+	<select id="idFind" parameterType="Map" resultType="String">
+		select id from member
+		where mname = #{mname}
+		and email = #{email}
+	</select>
 
 	<select id="total" parameterType="Map" resultType="int">
 		select count(*) from member

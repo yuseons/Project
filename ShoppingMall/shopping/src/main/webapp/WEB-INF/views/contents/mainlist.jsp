@@ -3,7 +3,7 @@
 <!DOCTYPE html> 
 <html> 
 <head>
-  <title>상품 메인페이지</title>
+  <title>상품메인페이지</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/css/style.css">
 </head>

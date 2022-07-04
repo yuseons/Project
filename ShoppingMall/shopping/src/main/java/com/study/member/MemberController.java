@@ -23,94 +23,82 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.study.contents.ContentsController;
+import com.study.review.ReviewController;
 import com.study.utility.Utility;
 
 @Controller
 public class MemberController {
-  //로그 확인 위해
-  private static final Logger log = LoggerFactory.getLogger(MemberController.class);
 
+  private static final Logger log = LoggerFactory.getLogger(MemberController.class);
   
   @Autowired
   @Qualifier("com.study.member.MemberServiceImpl")
-  private MemberService service;
-
+   private MemberService service;
   
-  
-//패스워드 찾기
-  @GetMapping("/member/findPwex") //같은 이름의 get방식이 2개일경우 url이름은 다르게 해야함 
-  @ResponseBody
-  public String findPw(@RequestParam Map<String,String> map  ) {
+  @GetMapping("/member/idfind")
+  public String idfind() {
     
-    String pw = service.findPw(map);
-    
-    
-    if(pw != null && !pw.equals("")) {
-      return "찾으시는 패스워드는 "+pw+" 입니다." ;
-      }else {
-      return "찾으시는 패스워드가 존재하지 않습니다.";
-    }
-
+    return "/member/idfind";
   }
- 
-  @GetMapping("/member/findPw")
-  public String findPw() {
-    
-    return "/member/findPw";
-  }
-  
-
-  
-//아이디 찾기
-  @GetMapping("/member/findIdex") //같은 이름의 get방식이 2개일경우 url이름은 다르게 해야함 
+  @GetMapping("/member/idfindex")
   @ResponseBody
-  public String findId(@RequestParam Map<String,String> map  ) {
+  public String idfind(@RequestParam Map<String, String> map) {
     
-    String id = service.findId(map);
-    
+    String id = service.idFind(map);
     
     if(id != null && !id.equals("")) {
-      return "찾으시는 아이디는 "+id+" 입니다." ;
-      }else {
-      return "찾으시는 아이디가 존재하지 않습니다.";
+      return "찾으시는 아이디는 "+id+ " 입니다.";
+    }else {
+      return "찾으시는 아이디는 존재하지 않습니다.";
     }
-
-  }
- 
-  @GetMapping("/member/findId")
-  public String findId() {
     
-    return "/member/findId";
   }
   
+  @GetMapping("/member/pwfind")
+  public String pwfind() {
+    
+    return "/member/pwfind";
+  }
+  @GetMapping("/member/pwfindex")
+  @ResponseBody
+  public String pwfind(@RequestParam Map<String, String> map) {
+    
+    String pw = service.pwFind(map);
+    
+    if(pw != null && !pw.equals("")) {
+      return "찾으시는 비번은 "+pw+ " 입니다.";
+    }else {
+      return "찾으시는 비번은 존재하지 않습니다.";
+    }
+    
+  }
   
-  
+
+
   @GetMapping("/member/read")
   public String read(String id, Model model) {
 
       MemberDTO dto = service.read(id);
-      
-      log.info("dto:"+dto);
 
+      log.info("dto:"+dto);
+      
       model.addAttribute("dto", dto);
 
       return "/member/read";
-    }
-  
-  
+
+  }
   @GetMapping("/member/mypage")
   public String mypage(HttpSession session, Model model) {
     String id = (String) session.getAttribute("id");
-
+    
     if (id == null) {
       return "redirect:/member/login/";
     } else {
-
+      
       MemberDTO dto = service.mypage(id);
-
+      
       model.addAttribute("dto", dto);
-
+      
       return "/member/mypage";
     }
   }

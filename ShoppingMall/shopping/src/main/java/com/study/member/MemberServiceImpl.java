@@ -3,8 +3,6 @@ package com.study.member;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -81,22 +79,15 @@ public class MemberServiceImpl implements MemberService {
   }
 
   @Override
-  public String findId(Map<String, String> map) {
+  public String idFind(Map<String, String> map) {
     // TODO Auto-generated method stub
-    return mapper.findId(map);
+    return mapper.idFind(map);
   }
-
 
   @Override
-  public String findPw(Map<String, String> map) {
+  public String pwFind(Map<String, String> map) {
     // TODO Auto-generated method stub
-    return mapper.findPw(map);
+    return mapper.pwFind(map);
   }
-
-
-
-
-
-
 
 }

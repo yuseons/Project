@@ -14,12 +14,15 @@ img {
  object-fit: contain;
 }
  
+ 
 </style>
 </head>
 <body> 
  
-<div class="container">   
-    <img src="/images/main.jpg" alt="main">   
+<div class="container">
+
+    <img src="/images/main.jpg" alt="Main">
+    
 </div>
 </body> 
 </html>
