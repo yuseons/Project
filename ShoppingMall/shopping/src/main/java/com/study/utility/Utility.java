@@ -55,24 +55,20 @@ public class Utility {
   }
   
   public static String getCodeValue(String code) {
-    String jobname = null;
+    String phone1 = null;
     Map<String,String> codes = new HashMap<String,String>();
     
-    codes.put("A01", "회사원");
-    codes.put("A02", "전산관련직");
-    codes.put("A03", "연구전문직");
-    codes.put("A04", "각종학교학생");
-    codes.put("A05", "일반자영업");
-    codes.put("A06", "공무원");
-    codes.put("A07", "의료인");
-    codes.put("A08", "법조인");
-    codes.put("A09", "종교/언론/예술인");
-    codes.put("A10", "기타");
-    
-    jobname = codes.get(code);
-    return jobname;
-    
+    codes.put("010", "010");
+    codes.put("011", "011");
+    codes.put("016", "016");
+    codes.put("017", "017");
+    codes.put("018", "018");
+    codes.put("019", "019");
+
+    phone1 = codes.get(code);
+    return phone1;
 }
+  
   /**
    * 오늘,어제,그제 날짜 가져오기
    * @return List- 날짜들 저장 SimpleDateFormat("yyyy-MM-dd")

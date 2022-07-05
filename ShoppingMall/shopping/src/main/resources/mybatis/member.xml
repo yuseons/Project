@@ -146,10 +146,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="create" parameterType="com.study.member.MemberDTO">
 		INSERT INTO member(id, passwd,
 		mname, tel, email, zipcode,
-		address1, address2, job, mdate, fname,
-		grade)
+		address1, address2, mdate, fname,
+		grade, sms)
 		VALUES(#{id}, #{passwd},#{mname}, #{tel}, #{email}, #{zipcode},
-		#{address1}, #{address2}, #{job}, sysdate(), #{fname}, 'H')
+		#{address1}, #{address2}, sysdate(), #{fname}, 'H', 'F')
 	</insert>
 
 
