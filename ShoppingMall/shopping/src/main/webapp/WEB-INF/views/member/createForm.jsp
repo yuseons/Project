@@ -14,11 +14,6 @@
 	}
 </style>
   <script type="text/javascript">
-  
-  //sms 수신동의
-  if(document.getElementById("sms").checked) {
-	    document.getElementById("sms_hidden").disabled = true;
-	}
 
   function idCheck(id){
 	  if(id==''){
@@ -109,17 +104,17 @@ function inCheck(f){
 		return false;
 	}
 	if(f.passwd.value.length==0){
-		alert("비번을 입력하세요");
+		alert("비밀번호를 입력하세요");
 		f.passwd.focus();
 		return false;
 	}
 	if(f.repasswd.value.length==0){
-		alert("비번확인을 입력하세요");
+		alert("비밀번호 확인을 입력하세요");
 		f.repasswd.focus();
 		return false;
 	}
 	if(f.passwd.value != f.repasswd.value){
-		alert("비번과 비번확인이 일치하지 않습니다.");
+		alert("비밀번호가 일치하지 않습니다.");
 		f.passwd.value="";
 		f.repasswd.value="";
 		f.passwd.focus();
@@ -140,11 +135,7 @@ function inCheck(f){
 		f.email.focus();
 		return false;
 	}
-	if(f.job.selectedIndex == 0){
-		alert("직업을 선택하세요");
-		f.job.focus();
-		return false;
-	}
+
 }
 
 </script>
@@ -203,24 +194,11 @@ function inCheck(f){
       </div>
     </div>
     <div class="form-group">
-    <label class="control-label col-sm-2" for="phone"><span id="need">*</span>전화번호</label>
-
-		<select name="phone1" >
-		<option value="010">010</option>
-		<option value="011">011</option>
-		<option value="016">016</option>
-		<option value="017">017</option>
-		<option value="018">018</option>
-		<option value="019">019</option>
-		</select>
-		-
-		<input id="phone2" name="phone2" maxlength="4" size=5 type="text" />
-		-
-		<input id="phone3" name="phone3" maxlength="4" size=5 type="text"  /> 
-		
-		<input type="checkbox" name="sms" value='T' id="sms"/>
-		<input type="hidden" name="sms" value='F' id="sms_hidden"/>	
-		<label for="sms">문자수신 동의</label>
+      <label class="control-label col-sm-2" for="tel"><span id="need">*</span>전화번호</label>
+      <div class="col-sm-4">          
+        <input type="text" class="form-control" id="tel" 
+        placeholder="Enter 전화번호"  name="tel">
+      </div>
     </div>
     
     <div class="form-group">

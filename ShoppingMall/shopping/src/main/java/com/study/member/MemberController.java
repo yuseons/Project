@@ -261,7 +261,8 @@ public class MemberController {
       }
 
     } else {
-      model.addAttribute("msg", "아이디 또는 비밀번호를 잘못 입력 했거나 <br>회원이 아닙니다. 회원가입 하세요");
+      model.addAttribute("msg", "아이디 또는 비밀번호가 일치하지 않습니다.");
+      
       return "/member/errorMsg";
     }
   }
@@ -339,11 +340,10 @@ public class MemberController {
     }
     return map;
   }
-
-  @GetMapping
-  public String home() {
-
-    return "/home";
+  
+  @PostMapping("/member/createForm")
+  public String create() {
+    return "/member/create";
   }
 
   @GetMapping("/member/agree")
@@ -352,9 +352,10 @@ public class MemberController {
     return "/member/agree";
   }
 
-  @PostMapping("/member/createForm")
-  public String create() {
-    return "/member/create";
-  }
+  
+  @GetMapping
+  public String home() {
 
+    return "/home";
+  }
 }

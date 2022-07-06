@@ -147,9 +147,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		INSERT INTO member(id, passwd,
 		mname, tel, email, zipcode,
 		address1, address2, mdate, fname,
-		grade, sms)
+		grade)
 		VALUES(#{id}, #{passwd},#{mname}, #{tel}, #{email}, #{zipcode},
-		#{address1}, #{address2}, sysdate(), #{fname}, 'H', 'F')
+		#{address1}, #{address2}, sysdate(), #{fname}, 'H')
 	</insert>
 
 
