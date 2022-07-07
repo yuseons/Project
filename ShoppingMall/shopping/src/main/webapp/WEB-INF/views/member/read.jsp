@@ -72,10 +72,6 @@
  	<td>${dto.address1} ${dto.address2}</td>
  </tr>
  <tr>
- 	<th>직업</th>
- 	<td>
- 	직업코드:${dto.job}(${util:jobname(dto.job)})
-     </td>
  </tr>
  <tr> 
  	<th>날짜</th>
