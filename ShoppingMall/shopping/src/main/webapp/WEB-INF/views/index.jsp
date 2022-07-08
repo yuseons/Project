@@ -40,47 +40,47 @@
                 </div>
                 <div class="row gx-0">
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="/contents/mainlist/1">
                             <div class="caption">
                                 <div class="caption-content">
-                                    <div class="h2">PANTS</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                                    <div class="h2">JEANS</div>
+                                    <p class="mb-0">Get ready to find your perfect fit today with our range of jeans.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/portfolio-1.jpg" alt="..." />
+                            <img class="img-fluid" src="/assets/img/jeans_main.jpg" alt="jeans" />
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="/contents/mainlist/2">
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">BAG</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                                    <p class="mb-0">Ensure you’re carrying your everyday essentials the right way this season with our on-trend collection of bags and purses for women.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/portfolio-2.jpg" alt="..." />
+                            <img class="img-fluid" src="/assets/img/bag_main.jpg" alt="bag" />
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="/contents/mainlist/3">
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">SHOES</div>
-                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                                    <p class="mb-0">Put your best foot forward and step out in style this season with our offering of the latest shoes for women to suit any occasion. </p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/portfolio-3.jpg" alt="..." />
+                            <img class="img-fluid" src="/assets/img/shoes_main.jpg" alt="shoes" />
                         </a>
                     </div>
                     <div class="col-lg-6">
                         <a class="portfolio-item" href="#!">
                             <div class="caption">
                                 <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                                    <div class="h2">TOPS</div>
+                                    <p class="mb-0">Whatever your vibe, top up your wardrobe now with our offering of women's tops.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/portfolio-4.jpg" alt="..." />
+                            <img class="img-fluid" src="/assets/img/top_main.jpg" alt="tops" />
                         </a>
                     </div>
                 </div>
