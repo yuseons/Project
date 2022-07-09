@@ -1,16 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" %> 
-
-
 <!DOCTYPE html> 
 <html> 
-    <head>
+ <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>ShoppingMall</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Simple line icons-->
@@ -21,17 +17,30 @@
         <link href="/css/index.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-
+    
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#page-top">DAILY</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/">Home</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/member/agree">JOIN</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/member/login">LOGIN</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">0</a></li>
+                <li class="sidebar-nav-item"><a href="#contact">0</a></li>
+            </ul>
+        </nav>
+     
 
         <!-- Header-->
         <header class="masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1">Stylish ShoppingMall</h1>
+                <h1 class="mb-1">DAILY</h1>
                 <a class="btn btn-primary btn-xl" href="/contents/mainlist/1">Shop now</a>
             </div>
         </header>
 
-        <!-- Portfolio-->
+        <!-- Best-->
         <section class="content-section" id="portfolio">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
@@ -47,7 +56,7 @@
                                     <p class="mb-0">Get ready to find your perfect fit today with our range of jeans.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/jeans_main.jpg" alt="jeans" />
+                            <img class="img-fluid" src="/img/jeans_main.jpg" alt="jeans" />
                         </a>
                     </div>
                     <div class="col-lg-6">
@@ -58,7 +67,7 @@
                                     <p class="mb-0">Ensure you’re carrying your everyday essentials the right way this season with our on-trend collection of bags and purses for women.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/bag_main.jpg" alt="bag" />
+                            <img class="img-fluid" src="/img/bag_main.jpg" alt="bag" />
                         </a>
                     </div>
                     <div class="col-lg-6">
@@ -69,7 +78,7 @@
                                     <p class="mb-0">Put your best foot forward and step out in style this season with our offering of the latest shoes for women to suit any occasion. </p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/shoes_main.jpg" alt="shoes" />
+                            <img class="img-fluid" src="/img/shoes_main.jpg" alt="shoes" />
                         </a>
                     </div>
                     <div class="col-lg-6">
@@ -80,13 +89,13 @@
                                     <p class="mb-0">Whatever your vibe, top up your wardrobe now with our offering of women's tops.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="/assets/img/top_main.jpg" alt="tops" />
+                            <img class="img-fluid" src="/img/top_main.jpg" alt="tops" />
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Call to Action-->
+        <!-- -->
         <section class="content-section bg-primary text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">로그인 하시면 다양하고 특별한 혜택을 이용할 수 있습니다.</h2>
@@ -94,12 +103,6 @@
                 <a class="btn btn-xl btn-dark" href="${root}/member/agree">JOIN</a>
             </div>
         </section>
-        <!-- Map-->
-        <div class="map" id="contact">
-            <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-            <br />
-            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
-        </div>
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container px-4 px-lg-5">
@@ -114,7 +117,7 @@
                         <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
                     </li>
                 </ul>
-                <p class="text-muted small mb-0">Copyright &copy; ShoppingMall 2022</p>
+                <p class="text-muted small mb-0">Copyright &copy; DAILY</p>
             </div>
         </footer>
         <!-- Scroll to Top Button-->
@@ -122,6 +125,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="/js/index.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

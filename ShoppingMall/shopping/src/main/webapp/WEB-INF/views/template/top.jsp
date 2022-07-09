@@ -8,40 +8,90 @@
     <c:when test="${not empty sessionScope.id && sessionScope.grade != 'A'}">
         <c:set var='str'>안녕하세요  ${sessionScope.id } 님!</c:set>
     </c:when>
-        <c:otherwise>
-        <c:set var="str">Welcome!</c:set>
+    <c:otherwise>
+        <c:set var="str">기본 페이지 입니다.</c:set>
     </c:otherwise>
 </c:choose>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html> 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Scrolling Nav</title>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/css/top.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container px-4">
-                <a class="navbar-brand" href="${root}/">Home</a>
-                    <li><a id="grade"><span class="glyphicon glyphicon-grain"></span> ${str}</a></li>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="${root}/member/login">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="${root}/member/agree">Join</a></li>
+<head>
 
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<script>
+if ( window.location.pathname == '/' ) {
+  document.write( '<style>#top{display:none !important;}</style>' );
+}
+</script>
+
+  <title>memo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  #grade{
+  
+   color :white;
+  }  
+  </style>
+  <script>
+  $(function(){
+      $.ajax({
+          url: "/contents/getCategory",
+          type: "GET",
+          //data: JSON.stringify(),
+          //contentType: "application/json; charset=utf-8;",
+          dataType: "json",
+          success: function(data){
+          for (var i = 0; i < data.length; i++) {
+          		$('#pmenu').append("<li><a href='/contents/mainlist/"+data[i].cateno+"'>" + data[i].catename + "</a></li>");
+          }                  
+
+          },
+          error: function(request,status,error){
+             alert("code = "+ request.status + " message = " + request.responseText + " error = " + error); // 실패 시 처리
+          }                
+      });//ajax end
+});//페이지로딩
+  </script>
+</head>
+<body> 
+<!--상단메뉴-->
+<div class="container-fluid" id="top">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="${root}/">Shop</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+
+    <li><a id="grade"><span class="glyphicon glyphicon-grain"></span> ${str}</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     <c:choose>
+    <c:when test="${empty sessionScope.id }">
+      <li><a href="${root}/member/agree"><span class="glyphicon glyphicon-user"></span> JOIN</a></li>
+      <li><a href="${root}/member/login"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+    </c:when>
+    <c:when test="${not empty sessionScope.id && sessionScope.grade == 'A'}">
+    <li><a href="${root}/admin/contents/create"><span class="glyphicon glyphicon-plus-sign"></span> 상품등록</a></li>
+    <li><a href="${root}/contents/list"><span class="glyphicon glyphicon-list"></span> 상품목록</a></li>
+    <li><a href="${root}/admin/member/list"><span class="glyphicon glyphicon-list"></span> 회원목록</a></li>
+    <li><a href="${root}/admin/order/list"><span class="glyphicon glyphicon-list"></span> 주문목록</a></li>
+    <li><a href="${root}/member/logout"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
+    </c:when>
+    <c:otherwise>
+    <li><a href="${root}/cart/list"><span class="glyphicon glyphicon-shopping-cart"></span>장바구니</a></li>
+    <li><a href="${root}/member/update"><span class="glyphicon glyphicon-edit"></span> 회원정보 수정</a></li>
+    <li><a href="${root}/member/logout"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
+        </c:otherwise>
+    </c:choose> 
     
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="/js/scripts.js"></script>
-    </body>
+    </ul>
+  </div>
+</nav>
+ 
+</div>
+</body>
 </html>
