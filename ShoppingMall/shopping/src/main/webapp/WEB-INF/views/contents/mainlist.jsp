@@ -22,13 +22,13 @@
 <c:otherwise>
 <c:set var="list" value="${list}"/>
 <div class="row">
-    <c:forEach var="dto" begin="0" end="3" items="${list}">
+    <c:forEach var="dto" begin="0" end="4" items="${list}">
     <div class="col-sm-3">
       <c:choose>
-      <c:when test="${cateno==1 }">
+      <c:when test="${cateno==2 }">
       <h3>Ripped Skinny</h3>
       </c:when>
-      <c:when test="${cateno==2 }">
+      <c:when test="${cateno==3 }">
       <h3>Luxury BAG</h3>
       </c:when>
       </c:choose>
@@ -48,10 +48,10 @@
     <c:forEach var="dto" begin="4" end="7" items="${list}">
     <div class="col-sm-3">
       <c:choose>
-      <c:when test="${cateno==1 }">
+      <c:when test="${cateno==2 }">
       <h3>Vintage Skinny</h3>
       </c:when>
-      <c:when test="${cateno==2 }">
+      <c:when test="${cateno==3 }">
       <h3>Classy BAG</h3>
       </c:when>
       </c:choose>

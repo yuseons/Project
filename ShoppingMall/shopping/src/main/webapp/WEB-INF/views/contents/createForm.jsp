@@ -56,13 +56,16 @@
       <select class="form-control" name="cateno">
         <option value="1"
         <c:if test= "${cateno==1}"> selected </c:if>
-        >Jean</option>
+        >TOP</option>
         <option value="2"
         <c:if test= "${cateno==2}"> selected </c:if>
-        >Bag</option>
+        >PANTS</option>
         <option value="3"
         <c:if test= "${cateno==3}"> selected </c:if>
-        >Shoes</option>
+        >BAG</option>
+        <option value="4"
+        <c:if test= "${cateno==4}"> selected </c:if>
+        >SHOES</option>
       </select>
     </div>
   </div>

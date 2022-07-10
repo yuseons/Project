@@ -1,4 +1,13 @@
 use webtest;
+
+drop table review;
+drop table cart;
+drop table order_detail  ;
+drop table orders  ;
+drop table contents;
+
+drop table category;
+
 CREATE TABLE IF NOT EXISTS `webtest`.`category` (
   `cateno` INT NOT NULL AUTO_INCREMENT, -- 분류번호
   `catename` VARCHAR(50) NOT NULL,      -- 분류명
@@ -6,13 +15,15 @@ CREATE TABLE IF NOT EXISTS `webtest`.`category` (
   PRIMARY KEY (`cateno`),
   FOREIGN KEY (`categrpno`) REFERENCES category(`cateno`)
 );
- 
+
+ insert into category(catename, categrpno)
+values('TOP', null);
 insert into category(catename, categrpno)
-values('Jean', null);
+values('PANTS', null);
 insert into category(catename, categrpno)
-values('Bag', null);
+values('BAG', null);
 insert into category(catename, categrpno)
-values('Shoes', null);
+values('SHOES', null);
         
 select cateno, catename
 from category
@@ -32,6 +43,14 @@ CREATE TABLE IF NOT EXISTS `webtest`.`contents` (
   FOREIGN KEY (`cateno`) REFERENCES category (`cateno`)
  );
  
+ -- TOP(1)
+ insert into contents(cateno, pname, price, filename, detail, rdate, stock)
+values(1, '탄탄 코튼 반팔 티셔츠 - 7color', 
+16500, 'top1_1.jpg',
+'베이직하고 활용도 높은 티셔츠',sysdate(),10);   
+
+ 
+ -- PANTS(2)
 insert into contents(cateno, pname, price, filename, detail, rdate, stock)
 values(1, 'Ripped Skinny Jeans', 
 50000, 'jeans2.jpg','찢어진 스키니 청바지 입니다.',sysdate(),10);   
@@ -56,6 +75,8 @@ insert into contents(cateno, pname, price, filename, detail, rdate, stock)
 values(1, '스키니 청바지', 
 40000, 'jeans1.jpg','스키니 청바지로 편하게 코디하세요, 외출시 가볍게 입을 수 있어 좋습니다.',sysdate(),10); 
 
+
+-- BAG(3)
 insert into contents(cateno, pname, price, filename, detail, rdate, stock)
 values(2, '명품 핸드백', 
 50000, 'bag1.jpg','고풍스럽런 명품핸드백 너무 예쁩니다. 인기만점 핸드백을 겟 하세요',sysdate(),10); 
@@ -80,9 +101,18 @@ insert into contents(cateno, pname, price, filename, detail, rdate, stock)
 values(2, '라탄 가방', 
 60000, 'bag6.png','인기만점 라탄 가방입니다. 여름에 예쁘게 코디하세요',sysdate(),10);
 
+-- SHOES(4)
+
 select contentsno, cateno, pname, price, filename, detail, stock 
 from contents ;
 
 update contents
 set filename = 'bag6.png'
 where contentsno = 12;
+
+delete from contents
+where contentsno = 2;
+
+delete from review
+where contentsno = 1;
+

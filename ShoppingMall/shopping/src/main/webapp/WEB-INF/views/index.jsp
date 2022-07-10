@@ -23,11 +23,12 @@
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"><a href="#page-top">DAILY</a></li>
-                <li class="sidebar-nav-item"><a href="${root}/">Home</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">TOP</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">PANTS</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">BAG</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">SHOES</a></li>
                 <li class="sidebar-nav-item"><a href="${root}/member/agree">JOIN</a></li>
                 <li class="sidebar-nav-item"><a href="${root}/member/login">LOGIN</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">0</a></li>
-                <li class="sidebar-nav-item"><a href="#contact">0</a></li>
             </ul>
         </nav>
      
@@ -43,16 +44,23 @@
         <!-- Best-->
         <section class="content-section" id="portfolio">
             <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h3 class="text-secondary mb-0">BEST ITEMS</h3>
-                    <h2 class="mb-5">BEST</h2>
-                </div>
                 <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="/contents/mainlist/1">
+   				 <div class="col-lg-6">
+                        <a class="portfolio-item" href=/contents/mainlist/1>
                             <div class="caption">
                                 <div class="caption-content">
-                                    <div class="h2">JEANS</div>
+                                    <div class="h2">TOP</div>
+                                    <p class="mb-0">Whatever your vibe, top up your wardrobe now with our offering of women's tops.</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="/img/top_main.jpg" alt="tops" />
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="/contents/mainlist/2">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">PANTS</div>
                                     <p class="mb-0">Get ready to find your perfect fit today with our range of jeans.</p>
                                 </div>
                             </div>
@@ -60,7 +68,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="/contents/mainlist/2">
+                        <a class="portfolio-item" href="/contents/mainlist/3">
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">BAG</div>
@@ -71,7 +79,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="/contents/mainlist/3">
+                        <a class="portfolio-item" href="/contents/mainlist/4">
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">SHOES</div>
@@ -79,17 +87,6 @@
                                 </div>
                             </div>
                             <img class="img-fluid" src="/img/shoes_main.jpg" alt="shoes" />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">TOPS</div>
-                                    <p class="mb-0">Whatever your vibe, top up your wardrobe now with our offering of women's tops.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="/img/top_main.jpg" alt="tops" />
                         </a>
                     </div>
                 </div>

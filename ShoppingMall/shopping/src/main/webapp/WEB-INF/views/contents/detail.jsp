@@ -84,20 +84,28 @@
   <ul class="list-group">
     <li class="list-group-item">사이즈 :
     <c:choose>
-     <c:when test="${dto.cateno==1}"> <!-- jean -->
+     <c:when test="${dto.cateno==1}"> <!-- TOP -->
      <select class="form-select" aria-label="Default select example">
 	  <option selected>사이즈 선택</option> <!-- select 순번 : 0 (배열형식)-->
-	  <option value="L">L</option>  <!-- select 순번 : 1 -->
+	  <option value="S">S</option>  <!-- select 순번 : 1 -->
 	  <option value="M">M</option>  <!-- select 순번 : 2 -->
-	  <option value="S">S</option>  <!-- select 순번 : 3 -->
+	  <option value="L">L</option>  <!-- select 순번 : 3 -->
 	 </select>
      </c:when>
-     <c:when test="${dto.cateno==2 }"> <!-- bag -->
+     <c:when test="${dto.cateno==2}"> <!-- PANTS -->
+     <select class="form-select" aria-label="Default select example">
+	  <option selected>사이즈 선택</option>
+	  <option value="S">S</option>  
+	  <option value="M">M</option>  
+	  <option value="L">L</option>  
+	 </select>
+     </c:when>
+     <c:when test="${dto.cateno==3 }"> <!-- BAG -->
       <select class="form-select" aria-label="Default select example" disabled="disabled">
 	  <option selected>사이즈 선택</option>
 	 </select>     
      </c:when>
-     <c:when test="${dto.cateno==3 }"> <!-- shoes -->
+     <c:when test="${dto.cateno==4 }"> <!-- SHOES -->
      <select class="form-select" aria-label="Default select example">
 	  <option selected>사이즈 선택</option>
 	  <option value="220">220</option>
@@ -109,7 +117,6 @@
      </c:when>
     </c:choose>
     <li class="list-group-item">가격 : ${dto.price }
-    <li class="list-group-item">재고 : ${dto.stock }
     <li class="list-group-item">수량 : <input type="number" name="quantity" min=0 max=20 value="1" id="qty">     
     <li class="list-group-item">
          <a href="javascript:cart()">
