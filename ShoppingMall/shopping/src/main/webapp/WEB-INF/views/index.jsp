@@ -23,10 +23,10 @@
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"><a href="#page-top">DAILY</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">TOP</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">PANTS</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">BAG</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">SHOES</a></li>
+                <li class="sidebar-nav-item"><a href="/contents/mainlist/1">TOP</a></li>
+                <li class="sidebar-nav-item"><a href="/contents/mainlist/2">PANTS</a></li>
+                <li class="sidebar-nav-item"><a href="/contents/mainlist/3">BAG</a></li>
+                <li class="sidebar-nav-item"><a href="/contents/mainlist/4">SHOES</a></li>
                 <li class="sidebar-nav-item"><a href="${root}/member/agree">JOIN</a></li>
                 <li class="sidebar-nav-item"><a href="${root}/member/login">LOGIN</a></li>
             </ul>

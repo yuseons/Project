@@ -23,4 +23,6 @@ public interface ContentsService {
   
   ContentsDTO detail(int contentsno);
 
+  int delete(int contentsno);
+
 }

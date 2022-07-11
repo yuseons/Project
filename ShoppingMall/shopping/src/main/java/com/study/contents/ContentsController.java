@@ -30,6 +30,15 @@ public class ContentsController {
   @Qualifier("com.study.contents.ContentsServiceImpl")
   private ContentsService service;
 
+  
+  @GetMapping("/admin/contents/delete/{contentsno}")
+  public String delete(@PathVariable int contentsno) {
+    int cnt =service.delete(contentsno);
+    if(cnt!=1) return "error";
+    return "redirect:/admin/contents/list";
+
+  }
+  
   @GetMapping("/contents/detail/{contentsno}")
   public String detail(@PathVariable("contentsno") int contentsno, 
       Model model, HttpServletRequest request) {
@@ -77,10 +86,7 @@ public class ContentsController {
       nowPage = Integer.parseInt(request.getParameter("nowPage"));
     }
     int recordPerPage = 8;// 한페이지당 보여줄 레코드갯수
- 
-    //(Oracle) DB에서 가져올 순번-----------------
-    //int sno = ((nowPage - 1) * recordPerPage) + 1;
-    //int eno = nowPage * recordPerPage;
+
 
     //(MySQL) DB에서 가져올 순번-----------------
     int sno = (nowPage - 1) * recordPerPage;
@@ -140,13 +146,13 @@ public class ContentsController {
     int cnt = service.updateFile(map);
 
     if (cnt == 1) {
-      return "redirect:./list";
+      return "redirect:/admin/contents/list";
     } else {
       return "error";
     }
   }
 
-  @GetMapping("/contents/updateFile/{contentsno}/{oldfile}")
+  @GetMapping("/admin/contents/updateFile/{contentsno}/{oldfile}")
   public String updateFileForm(@PathVariable("contentsno") int contentsno, @PathVariable("oldfile") String oldfile,
       Model model) {
     model.addAttribute("contentsno", contentsno);
@@ -160,13 +166,13 @@ public class ContentsController {
     int cnt = service.update(dto);
 
     if (cnt == 1) {
-      return "redirect:./list";
+      return "redirect:/admin/contents/list";
     } else {
       return "error";
     }
   }
 
-  @GetMapping("/contents/update/{contentsno}")
+  @GetMapping("/admin/contents/update/{contentsno}")
   public String update(@PathVariable("contentsno") int contentsno, Model model) {
 
     ContentsDTO dto = service.read(contentsno);
@@ -191,7 +197,7 @@ public class ContentsController {
     }
 
     if (service.create(dto) > 0) {
-      return "redirect:./list";
+      return "redirect:/admin/contents/list";
     } else {
       return "error";
     }
@@ -202,7 +208,7 @@ public class ContentsController {
     return "/contents/create";
   }
 
-  @RequestMapping("/contents/list")
+  @RequestMapping("/admin/contents/list")
   public String list(HttpServletRequest request) {
     // 검색관련------------------------
     String col = Utility.checkNull(request.getParameter("col"));
