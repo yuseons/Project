@@ -193,7 +193,7 @@ public class MemberController {
     if (cnt == 1) {
       return "redirect:./";
     } else {
-      return "./error";
+      return "error";
     }
   }
 

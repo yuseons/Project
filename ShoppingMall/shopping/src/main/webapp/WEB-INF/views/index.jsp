@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="root" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html> 
 <html> 
  <head>
@@ -27,8 +29,25 @@
                 <li class="sidebar-nav-item"><a href="/contents/mainlist/2">PANTS</a></li>
                 <li class="sidebar-nav-item"><a href="/contents/mainlist/3">BAG</a></li>
                 <li class="sidebar-nav-item"><a href="/contents/mainlist/4">SHOES</a></li>
+
+    <c:choose>
+    <c:when test="${empty sessionScope.id }">
                 <li class="sidebar-nav-item"><a href="${root}/member/agree">JOIN</a></li>
                 <li class="sidebar-nav-item"><a href="${root}/member/login">LOGIN</a></li>
+	</c:when>    
+    <c:when test="${not empty sessionScope.id && sessionScope.grade == 'A'}">
+                <li class="sidebar-nav-item"><a href="${root}/admin/contents/create">상품 등록</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/admin/contents/list">상품 목록</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/admin/member/list">회원 목록</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/admin/order/list">주문 목록</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/member/logout">LOGOUT</a></li>
+    </c:when>
+    <c:otherwise>
+                <li class="sidebar-nav-item"><a href="${root}/cart/list">장바구니</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/member/update">회원 수정</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/member/logout">LOGOUT</a></li>
+        </c:otherwise>
+    </c:choose> 
             </ul>
         </nav>
      
