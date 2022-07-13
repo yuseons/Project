@@ -49,7 +49,7 @@ public class MemberController {
     if(id != null && !id.equals("")) {
       return "찾으시는 아이디는 "+id+ " 입니다.";
     }else {
-      return "찾으시는 아이디는 존재하지 않습니다.";
+      return "일치하는 정보가 없습니다.";
     }
     
   }
@@ -66,9 +66,9 @@ public class MemberController {
     String pw = service.pwFind(map);
     
     if(pw != null && !pw.equals("")) {
-      return "찾으시는 비번은 "+pw+ " 입니다.";
+      return "찾으시는 비밀번호는 "+pw+ " 입니다.";
     }else {
-      return "찾으시는 비번은 존재하지 않습니다.";
+      return "일치하는 정보가 없습니다.";
     }
     
   }

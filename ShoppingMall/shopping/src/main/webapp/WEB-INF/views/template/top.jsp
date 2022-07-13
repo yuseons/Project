@@ -31,7 +31,6 @@
 if ( window.location.pathname == '/' ) {
   document.write( '<style>#top{display:none !important;}</style>' );
 }
-
   $(function(){
       $.ajax({
           url: "/contents/getCategory",
@@ -43,7 +42,6 @@ if ( window.location.pathname == '/' ) {
           for (var i = 0; i < data.length; i++) {
           		$('#pmenu').append("<li><a href='/contents/mainlist/"+data[i].cateno+"'>" + data[i].catename + "</a></li>");
           }                  
-
           },
           error: function(request,status,error){
              alert("code = "+ request.status + " message = " + request.responseText + " error = " + error); // 실패 시 처리
