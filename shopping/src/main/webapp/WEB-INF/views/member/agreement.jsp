@@ -4,11 +4,21 @@
 <html> 
 <head>
   <title>회원약관</title>
-  <meta charset="utf-8">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="/login/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="/login/css/style.css">
+    
   <script type="text/javascript">
   function send(){
     if(document.frm.agree.checked == false){ 
-      alert('회원 약관에 동의해야 회원 가입이 가능합니다.'); 
+      alert('이용약관에 동의해 주세요.'); 
       return false; // 서브밋 중지 
     }
     
@@ -19,7 +29,11 @@
 </head>
 <body> 
 <div class="container">
-<h2 class="col-sm-offset-1 col-sm-11">약관동의</h2>
+	<div class="mb-4">
+       <h3><strong>약관동의</strong></h3>
+       <p style="font-size:20px;">이용약관에 동의해 주세요.</p><br><br>
+     </div>
+                
 <form class="form-horizontal" 
       action="createForm"
       method="post"
@@ -31,7 +45,7 @@
   <div class="form-group">
     <label class="control-label col-sm-1" for="content"></label>
     <div class="col-sm-8">
-    <textarea rows="20" cols="100" id="content" name="content" class="form-control">Cummunity 서비스약관 (2005. 7. 18 부터 유효) 
+    <textarea rows="20" cols="100" id="content" name="content" class="form-control" style="font-size:15px;">Cummunity 서비스약관 (2005. 7. 18 부터 유효) 
  
 제1조(목적 등) 
  
@@ -215,10 +229,14 @@
   
    <div class="form-group">
    <div class="col-sm-offset-2 col-sm-5">
-    <input id="agree" type="checkbox" name="agree" value="1" ><label for="agree"> 약관에 동의합니다 </label>
-    
-    <button class="btn">회원가입</button>
-    <button type="button" class="btn" onclick="history.back()">취소</button>
+   <label class="control control--checkbox mb-0">
+   <input id="agree" type="checkbox" name="agree" value="1" ><label for="agree" >약관에 동의합니다 </label>
+      <div class="control__indicator"></div>
+      </label>
+    </div>
+    <div>
+    <button class="btn btn-info">회원가입</button>
+    <button type="button" class="btn btn-primary-outline" onclick="history.back()">취소</button>
    </div>
  </div>
 </form>
