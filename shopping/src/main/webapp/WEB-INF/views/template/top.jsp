@@ -31,9 +31,6 @@
 if ( window.location.pathname == '/' ) {
   document.write( '<style>#top{display:none !important;}</style>' );
 }
-if ( window.location.pathname == '/member/login' ) {
-	  document.write( '<style>#top{display:none !important;}</style>' );
-	}
 
   $(function(){
       $.ajax({

@@ -246,7 +246,7 @@ public class MemberController {
 
       }
 
-    } // ifcnt>0 end
+    }
 
     if (cnt > 0) {
 

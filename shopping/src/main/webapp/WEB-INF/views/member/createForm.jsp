@@ -3,7 +3,14 @@
 <html>
 <head>
   <title>회원가입</title>
-  <meta charset="utf-8">  
+    <meta charset="utf-8">  
+  
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/login.css">
+  
   <style type="text/css">
   	#need{
   		color:red;
@@ -144,10 +151,15 @@ function inCheck(f){
 
 </head>
 <body>
+
 <div class="container">
 
-<h2 class="col-sm-offset-2 col-sm-10">회원가입</h2>
-<label class="col-sm-offset-2 col-sm-10">(<span id="need">*</span> 필수입력사항)</label>
+    <div class="form-block">
+	<div class="mb-4">
+       <h3><strong>회원가입</strong></h3>
+       <p style="font-size:20px;">( <span id="need">*</span> 필수입력사항)</p><br><br>
+     </div>
+     
   <form class="form-horizontal" 
         action="create"
         method="post"
@@ -237,8 +249,8 @@ function inCheck(f){
        
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-5">
-        <button type="submit" class="btn btn-default">등록</button>
-        <button type="reset" class="btn btn-default">취소</button>
+        <button type="submit" class="btn btn-info">등록</button>
+        <button type="reset" class="btn btn-default" style="float:right;" onclick="history.back()" >취소</button>
       </div>
     </div>
   </form>

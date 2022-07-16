@@ -4,16 +4,14 @@
 <html> 
 <head>
   <title>회원약관</title>
+  <meta charset="utf-8">  
   
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
 
-    <link rel="stylesheet" href="/login/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="/login/css/style.css">
+    <link rel="stylesheet" href="/css/member.css">
     
   <script type="text/javascript">
   function send(){
@@ -29,6 +27,7 @@
 </head>
 <body> 
 <div class="container">
+    <div class="form-block">
 	<div class="mb-4">
        <h3><strong>약관동의</strong></h3>
        <p style="font-size:20px;">이용약관에 동의해 주세요.</p><br><br>
@@ -240,6 +239,7 @@
    </div>
  </div>
 </form>
+</div>
 </div>
 </body> 
 </html> 
