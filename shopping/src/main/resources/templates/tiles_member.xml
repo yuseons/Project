@@ -68,4 +68,5 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/member/mypage.jsp" />
 	</definition>
+
 </tiles-definitions>

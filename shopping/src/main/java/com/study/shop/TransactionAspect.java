@@ -18,7 +18,7 @@ public class TransactionAspect {
     private PlatformTransactionManager transactionManager;
     // 포인트 컷 선언: 트랜잭션이 적용되는 시점
     // private static final String EXPRESSION = "execution(* com.study..*Impl.*(..))";
-    // om.study 패키지로 시작하며 Impl로 끝나는 class의 모든 메소드에 트랜잭션 적용
+    // com.study 패키지로 시작하며 Impl로 끝나는 class의 모든 메소드에 트랜잭션 적용
     private static final String EXPRESSION = "execution(* com.study..*Impl.*(..))";
     @Bean
     public TransactionInterceptor transactionAdvice() {

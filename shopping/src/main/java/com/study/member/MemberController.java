@@ -35,6 +35,37 @@ public class MemberController {
   @Qualifier("com.study.member.MemberServiceImpl")
    private MemberService service;
   
+  
+  
+  
+  @PostMapping("/admin/member/update")
+  public String updateM(MemberDTO dto, Model model) {
+    int cnt = service.update(dto);
+
+    if (cnt == 1) {
+      model.addAttribute("id", dto.getId());
+      
+      return "redirect:/admin/member/list";
+    } else {
+      return "error";
+    }
+  }
+
+  @GetMapping("/admin/member/update")
+  public String updateM(String id, Model model) {
+
+    MemberDTO dto = service.read(id);
+
+    //log.info("dto:"+dto);
+    
+    model.addAttribute("dto", dto);
+
+    return "/member/update";
+
+  }
+  
+  
+  
   @GetMapping("/member/idfind")
   public String idfind() {
     
@@ -75,12 +106,12 @@ public class MemberController {
   
 
 
-  @GetMapping("/member/read")
+  @GetMapping("/admin/member/read")
   public String read(String id, Model model) {
 
       MemberDTO dto = service.read(id);
 
-      log.info("dto:"+dto);
+      //log.info("dto:"+dto);
       
       model.addAttribute("dto", dto);
 

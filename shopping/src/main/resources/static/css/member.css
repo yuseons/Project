@@ -74,6 +74,15 @@ p {
  .find{
 	font-size:15px;
 }
+  .form-block_2 {
+  background: #F8FFFF;
+  padding: 60px;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1); }
+  @media (max-width: 991.98px) {
+    .form-block {
+      padding: 30px; } }
+      
 .message{
 	
 font-size:20px;
@@ -84,4 +93,8 @@ font-weight: 700;
 padding:20px;
 	}	
 
-
+.createbox{
+    width: 1000px;
+    height: 550px;
+    margin: 0 auto; /* 블록요소를 부모영역에서 가운데 처리 */
+}

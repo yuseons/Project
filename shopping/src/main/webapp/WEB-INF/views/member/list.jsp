@@ -5,11 +5,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>회원목록</title>
+  <title>회원 목록</title>
   <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/member.css">
+  
   <script type="text/javascript">
   function read(id){
-	  var url = "${root}/member/read";
+	  var url = "${root}/admin/member/read";
 	  url += "?id="+id;
 	  
 	  location.href=url;
@@ -18,13 +20,15 @@
   </script>
 </head>
 <body>
-<div class="container">
-<h2 class="col-sm-offset-2 col-sm-10">회원목록</h2>
-${admin}
+<div class="createbox">
+<h2 align="center">회원 목록</h2>
 <br>
 <form class="form-inline"
       method="post"
       action="list">
+      
+
+   <div class="form-block_2">
 <div class="form-group">
 	<select name="col" class="form-control">
 	<option value="mname"
@@ -47,10 +51,10 @@ ${admin}
 	name="word" required="required" value="${word}">
 </div>
 <button class="btn btn-default">검색</button>
-<button class="btn btn-default" type="button" 
-onclick="location.href='create'">등록</button>
+</div>
 </form>
 
+   <div class="form-block">
 <br>
 <c:choose>
 	<c:when test="${empty list}">
@@ -93,6 +97,7 @@ onclick="location.href='create'">등록</button>
 </c:choose>
 ${paging}
 
+</div>
 </div>
 </body>
 </html>
