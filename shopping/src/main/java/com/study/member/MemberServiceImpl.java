@@ -90,4 +90,16 @@ public class MemberServiceImpl implements MemberService {
     return mapper.pwFind(map);
   }
 
+  @Override
+  public void delete(MemberDTO dto) {
+    // TODO Auto-generated method stub
+    mapper.delete(dto);
+  }
+
+  @Override
+  public int passCheck(Map map) {
+    // TODO Auto-generated method stub
+    return mapper.passCheck(map);
+  }
+
 }

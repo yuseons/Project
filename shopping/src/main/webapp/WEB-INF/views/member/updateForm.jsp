@@ -4,6 +4,7 @@
 <head>
   <title>회원수정</title>
   <meta charset="utf-8">
+      <link rel="stylesheet" href="/css/member.css">
   <style type="text/css">
   	#need,#emailcheck{
   		color:red;
@@ -100,7 +101,8 @@ function inCheck(f){
 </script>
 </head>
 <body>
-<div class="container">
+<div class="createbox">
+<div class="form-block">
 
 <h2 class="col-sm-offset-2 col-sm-10">회원수정</h2>
 <label class="col-sm-offset-2 col-sm-10">(<span id="need">*</span> 필수입력사항)</label>
@@ -169,12 +171,17 @@ function inCheck(f){
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-5">
         <button type="submit" class="btn btn-default">수정</button>
-        <button type="reset" class="btn btn-default">취소</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/member/mypage'">취소</button>
       </div>
     </div>
+              <div>
+      <br><br><br><br><br><br>
+           <button type="button" class="cre_btn2" onclick="location.href='/member/delete'">회원탈퇴</button>
+      </div>
   </form>
 
 <br><br>
+</div>
 </div>
 </body>
 </html>

@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>나의 정보</title>
+    <link rel="stylesheet" href="/css/member.css">
   <meta charset="utf-8">
 </head>
 <body>
@@ -16,12 +17,21 @@
   <h3><span class="glyphicon glyphicon-user"></span> 나의 정보</h3>
   <img class="img-rounded" src="/member/storage/${dto.fname}" style="width:280px">${dto.fname}
   <div class="caption">
-    <p>ID:${dto.id}, 성명:${dto.mname}</p>
-    <p>배송지:(${dto.zipcode })${dto.address1 }  ${dto.address2}</p>
+  <br><br>
+    아이디 : ${dto.id}
+    <br><br>
+    이름 : ${dto.mname}
+    <br><br>
+    배송지 : (${dto.zipcode }) <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ${dto.address1 }  ${dto.address2}
+    <div>
+    <br><br>
+    <button type="button" class="agreebtn" onclick="location.href='/member/update'">회원정보 수정</button>
+    </div>
   </div>
   </div>
   <div class="col-sm-6">
-  <h3><span class="glyphicon glyphicon-gift"></span> 주문 내역 및 리뷰 작성</h3>
+  <h3><span class="glyphicon glyphicon-gift"></span> 주문 내역 및 리뷰 작성</h3><br><br>
   <ul class="list-group">
    <c:choose>
     <c:when test="${empty dto.list }">주문한 상품이 없습니다.</c:when>

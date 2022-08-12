@@ -31,4 +31,8 @@ public interface MemberService {
 
   String pwFind(Map<String, String> map);
 
+  void delete(MemberDTO dto);
+
+  int passCheck(Map map);
+
 }

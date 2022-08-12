@@ -123,7 +123,7 @@ public class ContentsController {
     return list;
   }
 
-  @PostMapping("/contents/updateFile")
+  @PostMapping("/admin/contents/updateFile")
   public String updateFile(MultipartFile filenameMF, String oldfile, int contentsno) throws IOException {
     String basePath = UploadCon.getUploadDir();
 
@@ -146,7 +146,7 @@ public class ContentsController {
     }
   }
 
-  @GetMapping("/contents/updateFile/{contentsno}/{oldfile}")
+  @GetMapping("/admin/contents/updateFile/{contentsno}/{oldfile}")
   public String updateFileForm(@PathVariable("contentsno") int contentsno, @PathVariable("oldfile") String oldfile,
       Model model) {
     model.addAttribute("contentsno", contentsno);
@@ -155,7 +155,7 @@ public class ContentsController {
     return "/contents/updateFile";
   }
 
-  @PostMapping("/contents/update")
+  @PostMapping("/admin/contents/update")
   public String update(ContentsDTO dto) {
     int cnt = service.update(dto);
 
@@ -166,7 +166,7 @@ public class ContentsController {
     }
   }
 
-  @GetMapping("/contents/update/{contentsno}")
+  @GetMapping("/admin/contents/update/{contentsno}")
   public String update(@PathVariable("contentsno") int contentsno, Model model) {
 
     ContentsDTO dto = service.read(contentsno);
@@ -202,7 +202,7 @@ public class ContentsController {
     return "/contents/create";
   }
 
-  @RequestMapping("/contents/list")
+  @RequestMapping("/admin/contents/list")
   public String list(HttpServletRequest request) {
     // 검색관련------------------------
     String col = Utility.checkNull(request.getParameter("col"));

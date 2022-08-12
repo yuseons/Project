@@ -6,26 +6,29 @@ use webtest;
    regdate date not null,
    id varchar(10) not null,
    contentsno int(7) not null,
-   foreign key(contentsno) references contents(contentsno)
+   foreign key(contentsno) references contents(contentsno),
+   FOREIGN KEY (id) REFERENCES member(id) ON DELETE CASCADE
 );
 
 select * from contents;
 select * from member;
 							-- 존재하는 글의 contentsno를 입력해야한다
 insert into review(content, regdate, id, contentsno)
-values('너무 이뻐요.',sysdate(),'user1',1);
+values('너무 이뻐요.',sysdate(),'user1',10);
 
 insert into review(content, regdate, id, contentsno)
-values('리뷰 남깁니다. 물건이 마음에 들어요.',sysdate(),'user2',1);
+values('리뷰 남깁니다. 물건이 마음에 들어요.',sysdate(),'user2',10);
 
 
 insert into review(content, regdate, id, contentsno)
-values('좋아요.',sysdate(),'user3',1);
+values('좋아요.',sysdate(),'user3',10);
 
 insert into review(content, regdate, id, contentsno)
-values('너무 편해요.',sysdate(),'user4',1);
+values('너무 편해요.',sysdate(),'user4',10);
 
-                    
+
+select * from review;            
+
 -- 리뷰 목록 list
 select rnum, content, regdate, id, contentsno
 from review

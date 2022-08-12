@@ -14,7 +14,7 @@ total                        int  NOT NULL,                     -- 총합금액
 payment                      VARCHAR(50)  NOT NULL,             -- 결제정보
 reqtext                      varchar(50)  not null,             -- 요청메세지
 
-  FOREIGN KEY (id) REFERENCES member(id)
+  FOREIGN KEY (id) REFERENCES member(id) ON DELETE CASCADE
 );
 
 
@@ -77,8 +77,6 @@ where  m.id='user1';
 
 SELECT LAST_INSERT_ID();
 
-delete from order_detail;
-delete from orders;
 
 -- 2개 조인
 select o.id,o.mname, o.orderno,o.odate,o.total,o.ostate,o.reqtext, 

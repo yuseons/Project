@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `webtest`.`cart` (
   `cartno` INT NOT NULL AUTO_INCREMENT COMMENT '장바구니 번호',
   `count` INT NOT NULL,
   `contentsno` INT NOT NULL,
-  `id` VARCHAR(10) NOT NULL,
+  `id` VARCHAR(10) NOT NULL ,
   `size` VARCHAR(3) NULL,
   PRIMARY KEY (`cartno`),
   CONSTRAINT `fk_cart_contents1`

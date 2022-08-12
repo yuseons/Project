@@ -44,7 +44,7 @@
     </c:when>
     <c:otherwise>
                 <li class="sidebar-nav-item"><a href="${root}/cart/list">장바구니</a></li>
-                <li class="sidebar-nav-item"><a href="${root}/member/update">회원 수정</a></li>
+                <li class="sidebar-nav-item"><a href="${root}/member/mypage">Mypage</a></li>
                 <li class="sidebar-nav-item"><a href="${root}/member/logout">LOGOUT</a></li>
         </c:otherwise>
     </c:choose> 

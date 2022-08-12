@@ -70,7 +70,6 @@ if ( window.location.pathname == '/' ) {
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">community
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="${root}/member/mypage">Mypage</a></li>
           <li><a href="${root}/contents/detail">Review</a></li>
           <li><a href="/notice/list">Notice</a></li>
           <li><a href="/naver_chatting">Q&A</a></li>
@@ -93,7 +92,7 @@ if ( window.location.pathname == '/' ) {
     </c:when>
     <c:otherwise>
     <li><a href="${root}/cart/list"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-    <li><a href="${root}/member/update"><span class="glyphicon glyphicon-edit"></span> 회원수정</a></li>
+    <li><a href="${root}/member/mypage"><span class="glyphicon glyphicon-edit"></span> Mypage</a></li>
     <li><a href="${root}/member/logout"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
         </c:otherwise>
     </c:choose> 

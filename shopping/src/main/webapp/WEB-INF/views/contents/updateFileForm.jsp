@@ -11,7 +11,7 @@
 
 <h1 class="col-sm-offset-2 col-sm-10">이미지 수정</h1>
   <form class="form-horizontal" 
-        action="/contents/updateFile"
+        action="/admin/contents/updateFile"
         method="post"
         enctype="multipart/form-data"
         >   

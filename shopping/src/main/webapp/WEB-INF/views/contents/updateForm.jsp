@@ -40,7 +40,7 @@
 <div class="container">
 <h1 class="col-sm-offset-2 col-sm-10">상품 수정</h1>
 <form class="form-horizontal" 
-      action="/contents/update"
+      action="/admin/contents/update"
       method="post"
       onsubmit="return checkIn(this)">
   <input type="hidden" name="contentsno" value="${contentsno}">

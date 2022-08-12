@@ -109,3 +109,5 @@ FROM member
 where mname like '%홍%'
 ORDER BY mdate DESC 
 limit 0,3;
+
+delete from member where id='user1';

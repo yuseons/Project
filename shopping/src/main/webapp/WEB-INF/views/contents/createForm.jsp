@@ -104,7 +104,7 @@
    <div class="form-group">
    <div class="col-sm-offset-2 col-sm-5">
     <button class="btn">등록</button>
-    <button type="reset" class="btn">취소</button>
+    <button type="button" class="btn" onclick="location.href='/admin/contents/list'">취소</button>
    </div>
  </div>
 </form>

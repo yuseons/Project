@@ -5,6 +5,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.study.member.MemberMapper">
 
+	<select id="passCheck" parameterType="Map" resultType="int">
+		select
+		count(id)
+		from member
+		where id = #{id}
+		and passwd = #{passwd}
+	</select>
+
+
+	<delete id="delete" parameterType="com.study.member.MemberDTO">
+		delete from member
+		where id = #{id}
+	</delete>
+
+
 	<resultMap type="com.study.member.MemberDTO" id="memberOrder">
 		<result property="id" column="id" />
 		<result property="mname" column="mname" />

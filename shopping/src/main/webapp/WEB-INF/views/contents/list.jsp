@@ -68,7 +68,7 @@
     <th>가격</th>
     <th>등록날짜</th>
     <th>재고</th>
-    <th>수정/삭제/이미지수정</th>
+    <th>수정 / 삭제 / 이미지 수정</th>
     </tr>
    </thead>
    <tbody>
@@ -98,12 +98,12 @@
     <td>${dto.stock}</td>
     <td> <a href="./update/${dto.contentsno }">
           <span class="glyphicon glyphicon-edit"></span>
-        </a>
-        /
+        </a>&nbsp;&nbsp;
+        /&nbsp;&nbsp;
         <a href="./delete/${dto.contentsno }">
           <span class="glyphicon glyphicon-trash"></span>
-        </a>
-        /
+        </a>&nbsp;&nbsp;
+        /&nbsp;&nbsp;
         <a href="./updateFile/${dto.contentsno }/${dto.filename}">
           <span class="glyphicon glyphicon-picture"></span>
         </a>     

@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.study.review.ReviewController;
 import com.study.utility.Utility;
@@ -36,6 +37,49 @@ public class MemberController {
    private MemberService service;
   
   
+  
+  
+  @PostMapping("/member/delete")
+  public String delete(String id, String passwd, MemberDTO dto, RedirectAttributes ra, HttpSession session){
+
+  Map map = new HashMap();
+    map.put("id", id);
+    map.put("passwd", passwd);
+
+    int pflag = service.passCheck(map);
+
+
+    if (pflag == 1) {
+
+        service.delete(dto);
+
+
+    }else {
+      ra.addFlashAttribute("msg", false);
+
+      return "redirect:/member/delete";
+    }
+
+    session.invalidate();
+    return "redirect:/";
+  }
+
+
+  @GetMapping("/member/delete")
+  public String delete(String id, HttpSession session, Model model){
+
+    if (id == null) {
+      id = (String) session.getAttribute("id");
+    }
+
+    MemberDTO dto = service.read(id);
+
+    model.addAttribute("dto", dto);
+
+    //log.info("dto: "+dto);
+
+    return "/member/delete";
+  }
   
   
   @PostMapping("/admin/member/update")
@@ -183,7 +227,7 @@ public class MemberController {
 
     if (cnt == 1) {
       model.addAttribute("id", dto.getId());
-      return "redirect:/";
+      return "redirect:/member/mypage";
     } else {
       return "error";
     }
