@@ -2,7 +2,20 @@
 
 ### **🎯 Spring Boot 기반으로 구현한 쇼핑몰 웹 사이트입니다.**
 
-### 📜 프로젝트 구현 기능
+### ⚙️ 개발 환경
+
+운영체제 : Windows 10
+통합개발환경 : STS(Spring Tool Suite)
+JDK 버전 : JDK 11
+데이터 베이스 : MySQL
+빌드 툴 : Gradle
+
+### ⚒️ 기술 스택
+
+HTML, CSS, JavaScript, Ajax, jQuery
+Spring Boot, MyBatis, MySQL
+
+### 📜 구현 기능
 
 - 회원 (member)
 
@@ -38,7 +51,7 @@
 - 주문
   - 상품 주문
 
-### 📜 프로젝트 DB
+### 📜 DB
 
 - member : 회원 정보 테이블
 - contents : 상품 정보 테이블
