@@ -38,9 +38,24 @@ public class MemberController {
   
   
   
+  @GetMapping("/admin/member/delete")
+  public String delete(String id, String oldfile) {
+    
+    String basePath = UploadMem.getUploadDir();
+    
+    if (oldfile != null && !oldfile.equals("member.jpg")) { 
+      Utility.deleteFile(basePath, oldfile);
+    }
+    
+    service.delete(id);
+
+    return "redirect:/admin/member/list";
+
+  }
+  
   
   @PostMapping("/member/delete")
-  public String delete(String id, String passwd, MemberDTO dto, RedirectAttributes ra, HttpSession session){
+  public String delete(String id, String passwd, RedirectAttributes ra, HttpSession session){
 
   Map map = new HashMap();
     map.put("id", id);
@@ -51,7 +66,7 @@ public class MemberController {
 
     if (pflag == 1) {
 
-        service.delete(dto);
+        service.delete(id);
 
 
     }else {

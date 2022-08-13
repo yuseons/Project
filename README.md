@@ -27,7 +27,7 @@ Spring Boot, MyBatis, MySQL
 - 관리자 페이지 (admin)
 
   - 상품 목록 (등록, 조회, 수정)
-  - 회원 목록
+  - 회원 목록 (조회, 수정, 삭제)
 
 - 상품 (contents)
 

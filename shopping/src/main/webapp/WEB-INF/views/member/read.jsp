@@ -7,6 +7,7 @@
 <head>
   <title>회원정보</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/member.css">
   <script type="text/javascript">
   function updateM(){
 	  var url = "update";
@@ -15,25 +16,16 @@
 	  location.href = url;
   }
   
-  function updatePw(){
-	  var url = "updatePwForm";
-	  url += "?id=${dto.id}";
-	  
-	  location.href = url;
-  }
-  
-  function updateFile(){
-	  var url = "updateFile";
-	  //url += "?id=${dto.id}";
-	  url += "?oldfile=${dto.fname}";
-	  location.href = url;
-  }
+
   function deleteM(){
+		if(confirm("정말 회원을 삭제하시겠습니까?")){
 	  var url = "delete";
 	  url += "?id=${dto.id}";
 	  url += "&oldfile=${dto.fname}";
 	  location.href = url;
   }
+ }
+
   </script>
 </head>
 <body>
@@ -44,7 +36,7 @@
  <tr>
  	<td colspan="2" style="text-align: center">
  		<img src="/member/storage/${dto.fname}" 
- 		width="250px" height="250px" class="img-rounded" >
+ 		width="250px" height="250px" class="img-rounded" name="fname" >
  	</td>
  </tr>
  <tr>
@@ -80,19 +72,14 @@
  
  </table>
  <div style="text-align: center">
- <button class="btn btn-default" onclick="updateM()">정보수정</button>
-
- <button class="btn btn-default" 
- onclick="location.href='./download?dir=/member/storage&filename=${dto.fname}'">다운로드</button>  
-
- <button class="btn btn-default" onclick="deleteM()">회원탈퇴</button>
-
- <button class="btn btn-default" onclick="location.href='list'">회원목록</button>
-
- </div>
- 
  <br>
- 
+ <button class="cre_btn" onclick="updateM()">회원정보 수정</button>&nbsp;&nbsp;&nbsp;&nbsp;
+ <button class="cre_btn" onclick="deleteM()">회원 삭제</button>
+ <div>
+  <br> <br>
+ <button class="cre_btn2" onclick="location.href='list'">회원 목록</button>
+ </div>
 </div>
+<br>
 </body>
 </html>

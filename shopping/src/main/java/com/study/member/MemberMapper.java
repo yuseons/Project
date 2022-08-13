@@ -31,7 +31,7 @@ public interface MemberMapper {
   
   String pwFind(Map<String, String> map);
   
-  void delete(MemberDTO dto);
+  void delete(String id);
   
   int passCheck(Map map);
   
