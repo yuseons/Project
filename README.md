@@ -2,6 +2,10 @@
 
 ### **🎯 Spring Boot 기반으로 구현한 쇼핑몰 웹 사이트입니다.**
 
+<p align="center">
+<img src="https://github.com/yuseons/TIL/blob/master/image/shopping_main.gif">
+</p>
+
 ### ⚙️ 개발 환경
 
 운영체제 : Windows 10
