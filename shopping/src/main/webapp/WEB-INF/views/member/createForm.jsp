@@ -9,6 +9,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="/css/login.css">
   
   <style type="text/css">
@@ -20,8 +22,32 @@
 		color : red;
 	}
 </style>
-  <script type="text/javascript">
 
+  <script type="text/javascript">
+  
+  $(document).ready(function(){
+      var idcheck_clicked = 0;
+  $("#idcheck_btn").click(function(){ idcheck_clicked++ });
+  $("#submit").click(function(){
+      if (idcheck_clicked <= 0){
+          alert('아이디 중복 확인 버튼을 클릭해 주세요');
+          return false;
+      }
+  });
+});
+  
+  $(document).ready(function(){
+      var email_check_clicked = 0;
+  $("#email_check").click(function(){ email_check_clicked++ });
+  $("#submit").click(function(){
+      if (email_check_clicked <= 0){
+          alert('이메일 중복 확인 버튼을 클릭해 주세요');
+          return false;
+      }
+  });
+});
+
+  
   function idCheck(id){
 	  if(id==''){
 		  alert("아이디를 입력하세요");
@@ -52,6 +78,10 @@
 		  })
 	  }
   }
+  
+  
+
+
   </script>
   <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
   <script>
@@ -180,7 +210,7 @@ function inCheck(f){
         <input type="text" class="form-control" id="id" placeholder="Enter id" 
         name="id">
       </div>
-      <button type="button" class="btn btn-default col-sm-2"
+      <button type="button" class="btn btn-default col-sm-2" id="idcheck_btn"
       onclick="idCheck(document.frm.id.value)">ID 중복확인</button>
       <div id="idcheck"></div>
     </div>
@@ -220,7 +250,7 @@ function inCheck(f){
         placeholder="Enter email"  name="email">
       </div>
       
-      <button type="button" class="btn btn-default col-sm-2"
+      <button type="button" class="btn btn-default col-sm-2" id="email_check"
       onclick="emailCheck(document.frm.email.value)">Email 중복확인</button>
       <div id="emailcheck"></div>
       
@@ -249,7 +279,7 @@ function inCheck(f){
        
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-5">
-        <button type="submit" class="btn btn-info">등록</button>
+        <button type="submit" class="btn btn-info" id="submit">등록</button>
         <button type="reset" class="btn btn-default" style="float:right;" onclick="history.back()" >취소</button>
       </div>
     </div>
