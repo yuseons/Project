@@ -1,10 +1,14 @@
 ## DAILY ShoppingMall
 
+<br>
+
 ### **🎯 Spring Boot 기반으로 구현한 쇼핑몰 웹 사이트입니다.**
 
 <p align="center">
 <img src="https://github.com/yuseons/TIL/blob/master/image/shopping_main.gif">
 </p>
+
+<br>
 
 ### ⚙️ 개발 환경
 
@@ -14,10 +18,14 @@ JDK 버전 : JDK 11
 데이터 베이스 : MySQL
 빌드 툴 : Gradle
 
+<br>
+
 ### ⚒️ 기술 스택
 
 HTML, CSS, JavaScript, Ajax, jQuery
 Spring Boot, MyBatis, MySQL
+
+<br>
 
 ### 📜 구현 기능
 
@@ -54,6 +62,8 @@ Spring Boot, MyBatis, MySQL
 
 - 주문
   - 상품 주문
+
+<br>
 
 ### 📜 DB
 
