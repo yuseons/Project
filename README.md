@@ -36,11 +36,6 @@ Spring Boot, MyBatis, MySQL
   - 회원가입
   - Mypage (회원정보 확인, 수정, 탈퇴, 주문내역 조회)
 
-- 관리자 페이지 (admin)
-
-  - 상품 목록 (등록, 조회, 수정)
-  - 회원 목록 (조회, 수정, 삭제)
-
 - 상품 (contents)
 
   - 상품 상세 페이지
@@ -48,20 +43,25 @@ Spring Boot, MyBatis, MySQL
     - 장바구니에 담기
     - 바로 주문하기
 
+- 장바구니 (cart)
+
+  - 장바구니 담기
+  - 장바구니 조회, 삭제
+  - 장바구니 주문
+
+- 주문 (order)
+
+  - 상품 주문
+
 - 공지사항(notice)
 
   - 공지사항 목록, 조회 (회원)
   - 공지사항 등록, 수정, 삭제 (관리자)
 
-- 장바구니 (cart)
+- 관리자 페이지 (admin)
 
-  - 장바구니 담기
-  - 장바구니 조회
-  - 장바구니 삭제
-  - 장바구니 상품 주문
-
-- 주문
-  - 상품 주문
+  - 상품 관리 (등록, 조회, 수정)
+  - 회원 관리 (조회, 수정, 삭제)
 
 <br>
 
@@ -79,6 +79,18 @@ Spring Boot, MyBatis, MySQL
 
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/contents.jpg">
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/review.jpg">
+
+#### 장바구니, 주문
+
+<img src="https://github.com/yuseons/ShoppingMall/blob/master/img/cart,order.jpg">
+
+#### 공지사항
+
+<img src="https://github.com/yuseons/ShoppingMall/blob/master/img/notice.jpg">
+
+#### 관리자 페이지
+
+<img src="https://github.com/yuseons/ShoppingMall/blob/master/img/admin.jpg">
 
 ### 📜 DB
 
