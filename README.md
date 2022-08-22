@@ -1,6 +1,5 @@
 ## DAILY ShoppingMall
 
-
 <br>
 
 ### **🎯 Spring Boot 기반으로 구현한 쇼핑몰 웹 사이트입니다.**
@@ -36,39 +35,7 @@ Spring Boot, MyBatis, MySQL
 
 ### 📜 구현 기능
 
-- 회원 (member)
-
-  - 로그인, 로그아웃
-  - 아이디, 패스워드 찾기
-  - 회원가입
-  - Mypage (회원정보 확인, 수정, 탈퇴, 주문내역 조회)
-
-- 상품 (contents)
-
-  - 상품 상세 페이지
-    - 리뷰 작성, 수정, 삭제
-    - 장바구니에 담기
-    - 바로 주문하기
-
-- 장바구니 (cart)
-
-  - 장바구니 담기
-  - 장바구니 조회, 삭제
-  - 장바구니 주문
-
-- 주문 (order)
-
-  - 상품 주문
-
-- 공지사항(notice)
-
-  - 공지사항 목록, 조회 (회원)
-  - 공지사항 등록, 수정, 삭제 (관리자)
-
-- 관리자 페이지 (admin)
-
-  - 상품 관리 (등록, 조회, 수정)
-  - 회원 관리 (조회, 수정, 삭제)
+<img src="https://github.com/yuseons/TIL/blob/master/image/semi.png">
 
 <br>
 
