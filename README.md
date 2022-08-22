@@ -35,7 +35,7 @@ Spring Boot, MyBatis, MySQL
 
 ### 📜 구현 기능
 
-<img src="https://github.com/yuseons/TIL/blob/master/image/semi.png">
+<img src="https://github.com/yuseons/ShoppingMall/blob/master/img/semi.png">
 
 <br>
 
