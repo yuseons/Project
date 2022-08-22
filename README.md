@@ -39,32 +39,44 @@ Spring Boot, MyBatis, MySQL
 
 <br>
 
-#### 로그인,회원가입
+#### 📌 로그인,회원가입
 
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/login.jpg">
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/createMember.jpg">
 
-#### MyPage
+<br>
+
+#### 📌 MyPage
 
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/MyPage.jpg">
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/update%2CdeleteMember.jpg">
 
-#### 상품
+<br>
+
+#### 📌 상품
 
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/contents.jpg">
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/review.jpg">
 
-#### 장바구니, 주문
+<br>
+
+#### 📌 장바구니, 주문
 
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/cart,order.jpg">
 
-#### 공지사항
+<br>
+
+#### 📌 공지사항
 
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/notice.jpg">
 
-#### 관리자 페이지
+<br>
+
+#### 📌 관리자 페이지
 
 <img src="https://github.com/yuseons/ShoppingMall/blob/master/img/admin.jpg">
+
+<br>
 
 ### 📜 DB
 
